@@ -117,3 +117,5 @@ class SinglyLinkedList {
 // Test Code Here ~ ☕
 
 // Fun fact: Many video games use Singly Linked Lists for Inventory Management and, engines like Unity, can sometimes use them to manage key frames for animation under the hood. :)
+
+const newList = new SinglyLinkedList();
