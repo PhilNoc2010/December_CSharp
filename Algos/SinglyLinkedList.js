@@ -63,7 +63,7 @@ class SinglyLinkedList {
     insertAtBack(data) {
         // Your Code Here! 🌻
         // Hint to get started: SLL's need a head! Be sure to check for that. Otherwise, let's update the head of our list to our new value.
-        //
+        // Use a runner. A runner just means a variable that represents each node our code is currently looking at.
     }
 
     /**
@@ -115,3 +115,5 @@ class SinglyLinkedList {
 
 // *******************************************************************
 // Test Code Here ~ ☕
+
+// Fun fact: Many video games use Singly Linked Lists for Inventory Management and, engines like Unity, can sometimes use them to manage key frames for animation under the hood. :)
