@@ -128,11 +128,40 @@ class SinglyLinkedList {
         }
         return arr;
     }
+
+    /**
+     * Creates a new node with the given data and inserts that node at the front
+     * of the list.
+     * - Time: O(1) constant.
+     * - Space: O(1) constant.
+     * @param {any} data The data for the new node.
+     * @returns {SinglyLinkedList} This list.
+     */
+    insertAtFront(data) {
+        // Your code here
+    }
+
+    /**
+     * Removes the first node of this list.
+     * - Time: O(1) constant.
+     * - Space: O(1) constant.
+     * @returns {any} The data from the removed node.
+     */
+    removeHead() {
+        // Your code here
+    }
+
+    /**
+     * Calculates the average of this list.
+     * - Time: O(n) linear, n = length of list.
+     * - Space: O(1) constant.
+     * @returns {number|NaN} The average of the node's data.
+     */
+    average() {
+        // Your code here
+        // Note: Average is sum / # of nodes~
+    }
 }
 
 // *******************************************************************
 // Test Code Here ~ ☕
-
-// Fun fact: Many video games use Singly Linked Lists for Inventory Management and, engines like Unity, can sometimes use them to manage key frames for animation under the hood. :)
-
-const newList = new SinglyLinkedList();
