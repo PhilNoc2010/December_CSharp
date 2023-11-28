@@ -1,0 +1,15 @@
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\bin\Debug\net7.0\FirstCSharp.exe
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\bin\Debug\net7.0\FirstCSharp.deps.json
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\bin\Debug\net7.0\FirstCSharp.runtimeconfig.json
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\bin\Debug\net7.0\FirstCSharp.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\bin\Debug\net7.0\FirstCSharp.pdb
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.csproj.AssemblyReference.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.AssemblyInfoInputs.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.AssemblyInfo.cs
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.csproj.CoreCompileInputs.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\refint\FirstCSharp.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.pdb
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\FirstCSharp.genruntimeconfig.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\1_Monday\FirstCSharp\obj\Debug\net7.0\ref\FirstCSharp.dll

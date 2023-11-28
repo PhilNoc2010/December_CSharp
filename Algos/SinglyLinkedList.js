@@ -48,8 +48,11 @@ class SinglyLinkedList {
      * @returns {boolean}
      */
     isEmpty() {
-        // Your Code Here
-        // Hint for people that hate extra lines of code: Implicit Returns could be useful~
+        return this.head === null;
+        // if (this.head === null)
+        //     return true
+
+        // return false
     }
 
     /**
@@ -61,9 +64,19 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBack(data) {
-        // Your Code Here! 🌻
-        // Hint to get started: SLL's need a head! Be sure to check for that. Otherwise, let's update the head of our list to our new value.
-        // Use a runner. A runner just means a variable that represents each node our code is currently looking at.
+        const newNode = new ListNode(data);
+
+        if (this.isEmpty()) {
+            this.head = newNode;
+            return;
+        }
+
+        let runner = this.head;
+
+        while (runner.next !== null) {
+            runner = runner.next;
+        }
+        runner.next = newNode;
     }
 
     /**
@@ -77,8 +90,12 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBackRecursive(data, runner = this.head) {
-        // Your Code Here
-        // Hint: Recursive should be approached by finding the repeated action, and then that's where we want to call our function again recursively!
+        if (runner.next === null) {
+            runner.next = new ListNode(data);
+            return;
+        }
+
+        this.insertAtBackRecursive(data, runner.next);
     }
 
     /**
