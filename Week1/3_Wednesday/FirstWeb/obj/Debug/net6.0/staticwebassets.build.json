@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4Ndca7DtM+92QDHG8v09Jf4ODj1VWm4/eYwrsFf2Bk0=",
+  "Hash": "71vWY2L+I5/R8kgH2wWi8d+A9NrJoXcoXwNPVJ23WNU=",
   "Source": "FirstWeb",
   "BasePath": "_content/FirstWeb",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\imgs\\redpanda.jpg",
+      "Identity": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\img\\redpanda.jpg",
       "SourceId": "FirstWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\",
       "BasePath": "_content/FirstWeb",
-      "RelativePath": "imgs/redpanda.jpg",
+      "RelativePath": "img/redpanda.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,7 +31,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\redpanda.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\redpanda.jpg"
     }
   ]
 }

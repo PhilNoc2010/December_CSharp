@@ -39,6 +39,71 @@ public class FirstController : Controller
         return View();
     }
 
+
+
+
+    //! Creating a Form View/Route then using a Post Request Route to submit the form
+
+    [HttpGet("formview")]
+    public ViewResult FormView()
+    {
+        return View();
+    }
+
+
+
+    //! Pass the data across to a page with a ViewBag
+
+
+
+    //* =============================================================================================
+
+    // How to Handle a Redirect with three types:
+    //? RedirectResult - return Redirect("view_name");
+    // [HttpPost("submitform")]
+    // public RedirectResult SubmitForm(string Name, string Animal)
+    // {
+    //     Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+    //     return Redirect("FormView");
+    // }
+
+    //? RedirectToActionResult - return RedirectToAction("action_name");
+    // [HttpPost("submitform")]
+    // public RedirectToActionResult SubmitForm(string Name, string Animal)
+    // {
+    //     Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+    //     return RedirectToAction("FormView");
+    // }
+
+
+    //? IActionResult - return any Result/handle different return types. (Views, Actions, etc.)
+
+    [HttpPost("submitform")]
+    public IActionResult SubmitForm(string Name, string Animal)
+    {
+        if (Animal == "Red Panda")
+        {
+            return View("RedPanda");
+        }
+
+        ViewBag.Name = Name;
+        ViewBag.Animal = Animal;
+
+
+        Console.WriteLine($"Submitted Data : Name : {Name} - Animal : {Animal}");
+        return View("FormResult");
+    }
+
+
+
+
+
+
+
+
+
+
+
     [HttpGet("{**path}")]
     public string NoPage()
     {
