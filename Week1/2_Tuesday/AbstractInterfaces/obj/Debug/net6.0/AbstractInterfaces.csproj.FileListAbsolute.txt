@@ -1,0 +1,15 @@
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\bin\Debug\net6.0\AbstractInterfaces.exe
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\bin\Debug\net6.0\AbstractInterfaces.deps.json
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\bin\Debug\net6.0\AbstractInterfaces.runtimeconfig.json
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\bin\Debug\net6.0\AbstractInterfaces.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\bin\Debug\net6.0\AbstractInterfaces.pdb
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.csproj.AssemblyReference.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.AssemblyInfoInputs.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.AssemblyInfo.cs
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\refint\AbstractInterfaces.dll
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.pdb
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\AbstractInterfaces.genruntimeconfig.cache
+C:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\2_Tuesday\AbstractInterfaces\obj\Debug\net6.0\ref\AbstractInterfaces.dll
