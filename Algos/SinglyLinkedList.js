@@ -138,7 +138,10 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtFront(data) {
-        // Your code here
+        const newHead = new ListNode(data);
+        newHead.next = this.head;
+        this.head = newHead;
+        return this;
     }
 
     /**
@@ -148,7 +151,9 @@ class SinglyLinkedList {
      * @returns {any} The data from the removed node.
      */
     removeHead() {
-        // Your code here
+        const oldHead = this.head;
+        this.head = this.head.next;
+        return oldHead.data;
     }
 
     /**
@@ -158,8 +163,50 @@ class SinglyLinkedList {
      * @returns {number|NaN} The average of the node's data.
      */
     average() {
-        // Your code here
-        // Note: Average is sum / # of nodes~
+        let sum = 0;
+        let count = 0;
+        let runner = this.head;
+
+        while (runner) {
+            count++;
+            sum += runner.data;
+            runner = runner.next;
+        }
+        return sum / count;
+    }
+    /**
+     * Removes the last node of this list.
+     * - Time: O(n) linear, n = length of list.
+     * - Space: O(1) constant.
+     * @returns {any} The data from the node that was removed.
+     */
+    removeBack() {
+        // Your code here!
+        // Note: Be sure to handle any edge cases and to return the data of the node we've removed.
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(n) linear, n = length of list.
+     * - Space: O(1) constant.
+     * @param {any} val The data to search for in the nodes of this list.
+     * @returns {boolean}
+     */
+    contains(val) {
+        // Your code here!
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(n) linear, n = length of list.
+     * - Space: O(n) linear due to the call stack.
+     * @param {any} val The data to search for in the nodes of this list.
+     * @param {?node} current The current node during the traversal of this list
+     *    or null when the end of the list has been reached.
+     * @returns {boolean}
+     */
+    containsRecursive(val, current = this.head) {
+        // Your code here!
     }
 }
 
