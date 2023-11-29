@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "4Ndca7DtM+92QDHG8v09Jf4ODj1VWm4/eYwrsFf2Bk0=",
+  "Source": "FirstWeb",
+  "BasePath": "_content/FirstWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FirstWeb\\wwwroot",
+      "Source": "FirstWeb",
+      "ContentRoot": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\",
+      "BasePath": "_content/FirstWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\imgs\\redpanda.jpg",
+      "SourceId": "FirstWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week1\\3_Wednesday\\FirstWeb\\wwwroot\\",
+      "BasePath": "_content/FirstWeb",
+      "RelativePath": "imgs/redpanda.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\redpanda.jpg"
+    }
+  ]
+}

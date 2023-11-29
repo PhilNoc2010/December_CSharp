@@ -183,6 +183,21 @@ class SinglyLinkedList {
     removeBack() {
         // Your code here!
         // Note: Be sure to handle any edge cases and to return the data of the node we've removed.
+        //start by creating a runner to find the tail of the list
+        if (this.isEmpty()) {
+            return null;
+        }
+        if (this.head.next == null) {
+            return this.removeHead();
+        }
+        let runner = this.head;
+
+        while (runner.next.next != null) {
+            runner = runner.next;
+        }
+        let removedData = runner.next;
+        runner.next = null;
+        return removedData.data;
     }
 
     /**
@@ -194,6 +209,14 @@ class SinglyLinkedList {
      */
     contains(val) {
         // Your code here!
+        let runner = this.head;
+        while (runner) {
+            if (runner.data == val) {
+                return true;
+            }
+            runner = runner.next;
+        }
+        return false;
     }
 
     /**
@@ -207,6 +230,14 @@ class SinglyLinkedList {
      */
     containsRecursive(val, current = this.head) {
         // Your code here!
+        if (current == null) {
+            return false;
+        }
+        if (current.data == val) {
+            return true;
+        }
+
+        return this.containsRecursive(val, current.next);
     }
 }
 

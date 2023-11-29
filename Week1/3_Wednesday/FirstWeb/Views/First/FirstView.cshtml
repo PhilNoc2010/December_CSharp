@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First View Page</title>
+</head>
+<body>
+    <h1>Hello From the First View Page! 🎃</h1>
+
+
+    @{
+        List<string> FavFoods = new List<string>(){"sushi", "steak", "tacos", "udon"};
+        foreach (string food in FavFoods)
+        {
+            <p>@food</p>
+
+            if(food == "tacos")
+            {
+                <p>Nobody tell Shawn there are Tacos! </p>
+            }
+        }
+    }
+<hr>
+    @{
+        bool answer = true;
+        <p>@(answer ? "Yes" : "No")</p>
+    }
+
+    <img src="~/img/redpanda.jpg" alt="Red Panda">
+
+<hr>
+
+<h2>ViewBag Data:</h2>
+<p> @ViewBag.Name </p>
+<p> @ViewBag.Number </p>
+
+@foreach ( string pet in ViewBag.Pets)
+{
+    <p>@pet</p>
+}
+
+
+
+</body>
+</html>
