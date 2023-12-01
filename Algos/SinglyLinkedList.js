@@ -239,6 +239,130 @@ class SinglyLinkedList {
 
         return this.containsRecursive(val, current.next);
     }
+
+    /**
+     * Retrieves the data of the second to last node in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {any} The data of the second to last node or null if there is no
+     *    second to last node.
+     */
+    secondToLast() {
+        if (this.isEmpty()) {
+            return null
+        }
+        if (this.head.next == null) {
+            return null
+        }
+        let runner = this.head
+
+        while (runner.next.next != null) {
+            runner = runner.next
+        }
+        return runner.data
+    }
+
+    /**
+     * Removes the node that has the matching given val as it's data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The value to compare to the node's data to find the
+     *    node to be removed.
+     * @returns {boolean} Indicates if a node was removed or not.
+     */
+    removeVal(val) {
+        if (val == this.head.data) {
+            this.removeHead()
+            return true
+        }
+        let runner = this.head
+        while (runner.next !== null) {
+            if (runner.next.data == val) {
+                runner.next = runner.next.next
+                return true
+            }
+            runner = runner.next
+        }
+        return false
+    }
+
+    // EXTRA
+    /**
+     * Inserts a new node before a node that has the given value as its data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} newVal The value to use for the new node that is being added.
+     * @param {any} targetVal The value to use to find the node that the newVal
+     *    should be inserted in front of.
+     * @returns {boolean} To indicate whether the node was pre-pended or not.
+     */
+    prepend(newVal, targetVal) {
+        if (this.isEmpty()) {
+            return false
+        }
+        if (targetVal == this.head.data) {
+            this.insertAtFront(newVal)
+            return true
+        }
+        let runner = this.head
+        while (runner.next !== null) {
+            if (runner.next.data == targetVal) {
+                const newNode = new ListNode(newVal)
+                newNode.next = runner.next
+                runner.next = newNode
+                return true
+            }
+            runner = runner.next
+        }
+        return false
+    }
+
+    /**
+ * Concatenates the nodes of a given list onto the back of this list.
+ * - Time: O(n) n = "this" list length -> O(n) linear.
+ *    addList does not need to be looped over.
+ * - Space: O(1) constant, although this list grows by addList's length,
+ *    our algo doesn't create extra objects or arrays to take up more space.
+ * @param {SinglyLinkedList} addList An instance of a different list whose
+ *    whose nodes will be added to the back of this list.
+ * @returns {SinglyLinkedList} This list with the added nodes.
+ */
+    concat(addList) {
+        // Your Code Here
+        // Note: The List we're adding is another Singly Linked List that will be attached to the end of our original SLL. 
+    }
+
+    /**
+ * Finds the node with the smallest number as data and moves it to the front
+ * of this list.
+ * - Time: O(2n) n = list length -> O(n) linear,
+ *    2nd loop could go to end if min is at end.
+ * - Space: O(1) constant.
+ * @returns {SinglyLinkedList} This list.
+ */
+    moveMinFront() {
+        // Your Code Here
+        // Hint: When looking for our min, we want to be sure we're moving the node and not just the data.
+        // Note: Regarding edge cases, we want to check if the min value is already the head. Then we'll just want our original list returned.
+    }
+
+
+    // EXTRA
+    /**
+ * Splits this list into two lists where the 2nd list starts with the node
+ * that has the given value.
+ * splitOnVal(5) for the list (1=>3=>5=>2=>4) will change list to (1=>3),
+ * and the return value will be a new list containing (5=>2=>4)
+ * - Time: O(n) linear, n = list length, could split on last node.
+ * - Space: O(1) constant.
+ * @param {any} val The value in the node that the list should be split on.
+ * @returns {SinglyLinkedList} The split list containing the nodes that are
+ *    no longer in this list.
+ */
+    splitOnVal(val) {
+        // Your Code Here
+        // Search for a particular value, then take that node + other nodes ahead of it to be a new SLL.
+    }
 }
 
 // *******************************************************************
