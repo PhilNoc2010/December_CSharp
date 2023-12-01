@@ -1,0 +1,46 @@
+<h1>This is the Player Page</h1>
+
+
+<form asp-action="UpdatePlayer">
+    <div>
+
+        <label for="CharacterName">Character Name : </label>
+        <input type="text" name="CharacterName">
+    </div>
+    <div>
+
+        <label for="CharacterLevel">Character Level : </label>
+        <input type="number" name="CharacterLevel">
+    </div>
+
+
+    <input class="btn btn-success border" type="submit" value="Update Player">
+</form>
+
+<div class="container">
+
+    <p> Character Info Displayed Here : </p>
+    @if (Context.Session.GetString("CharacterName") == null)
+    {
+        <h1> Please Enter a Character Name! </h1>
+    }
+    else
+    {
+        <h1>Character Name : @Context.Session.GetInt32("CharacterName")</h1>
+    }
+    @if (Context.Session.GetString("CharacterLevel") == null)
+    {
+        <h1> Please Enter a Character Level! </h1>
+    }
+    else
+    {
+        <h1>Character Level : @Context.Session.GetInt32("CharacterLevel")</h1>
+    }
+
+</div>
+
+<div>
+    <a asp-action="Logout">
+        <button class="btn btn-danger mt-3 border">Log Out</button>
+    </a>
+</div>

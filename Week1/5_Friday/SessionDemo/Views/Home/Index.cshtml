@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Session 🌻";
+}
+
+<div class="text-center">
+
+    @if (Context.Session.GetString("UserName") == null)
+    {
+        <h1> Please Enter a Username Below! </h1>
+    }
+    else
+    {
+        <h1>Welcome, @Context.Session.GetString("UserName")</h1>
+    }
+
+
+    <form asp-action="Login">
+        <label for="UserName">User Name : </label>
+        <input type="text" name="UserName">
+
+        <input class="btn btn-success border" type="submit" value="Login">
+    </form>
+
+
+    <div>
+        <a asp-action="Player">
+            <button class="btn btn-success mt-3 border text-light">View Player Page</button>
+        </a>
+    </div>
+
+    <div>
+        <a asp-action="Logout">
+            <button class="btn btn-danger mt-3 border">Log Out</button>
+        </a>
+    </div>
+</div>

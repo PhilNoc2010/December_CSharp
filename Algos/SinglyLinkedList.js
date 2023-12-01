@@ -328,6 +328,16 @@ class SinglyLinkedList {
  * @returns {SinglyLinkedList} This list with the added nodes.
  */
     concat(addList) {
+        if (addList.isEmpty()) {
+            return this;
+        }
+        let runner = addList.head;
+        while (runner !== null) {
+            this.insertAtBack(runner.data);
+            runner = runner.next
+        }
+        return this;
+
         // Your Code Here
         // Note: The List we're adding is another Singly Linked List that will be attached to the end of our original SLL. 
     }
@@ -341,6 +351,20 @@ class SinglyLinkedList {
  * @returns {SinglyLinkedList} This list.
  */
     moveMinFront() {
+        let min = this.head;
+        let runner = this.head;
+        while (runner !== null) {
+            if (runner.data < min.data) {
+                min = runner;
+            }
+            runner = runner.next;
+        }
+        if (this.head == min) {
+            return this;
+        }
+        this.removeVal(min.data);
+        this.insertAtFront(min.data);
+        return this;
         // Your Code Here
         // Hint: When looking for our min, we want to be sure we're moving the node and not just the data.
         // Note: Regarding edge cases, we want to check if the min value is already the head. Then we'll just want our original list returned.
