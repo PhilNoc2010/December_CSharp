@@ -384,8 +384,33 @@ class SinglyLinkedList {
  *    no longer in this list.
  */
     splitOnVal(val) {
-        // Your Code Here
-        // Search for a particular value, then take that node + other nodes ahead of it to be a new SLL.
+        const newList = new SinglyLinkedList();
+
+        if (this.isEmpty()) {
+            return newList;
+        }
+        // Edge case if the value is found at the head, we'll just migrate the current list to the new list object and set the existing SLL head to null.
+        if (this.head.data === val) {
+            newList.head = this.head;
+            this.head = null;
+            return newList;
+        }
+
+        let runner = this.head;
+
+        while (runner.next) {
+            // Find the node that matches our value. 
+            if (runner.next.data === val) {
+                // Set the head of our new instance to the found node.
+                newList.head = runner.next;
+                // Set the current runner's next value to null to break the links.
+                runner.next = null;
+                // Return the new list, with it's nodes still intact as nested objects.
+                return newList;
+            }
+            runner = runner.next;
+        }
+        return newList;
     }
 }
 
