@@ -1,0 +1,25 @@
+@model Post
+@{
+    ViewData["Title"] = "New Post";
+}
+
+<h1>Edit this Post</h1>
+<form asp-action="UpdatePost" asp-route-postId="@Model.PostId" asp-controller="Post" method="POST"
+    class="shadow p-3 rounded">
+    <div class="mb-3">
+        <label asp-for="Topic"></label>
+        <input asp-for="Topic" class="form-control" value="@Model.Topic">
+        <span class="text-danger" asp-validation-for="Topic"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Body"></label>
+        <input asp-for="Body" class="form-control">
+        <span class="text-danger" asp-validation-for="Body"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImgURL"></label>
+        <input asp-for="ImgURL" class="form-control">
+        <span class="text-danger" asp-validation-for="ImgURL"></span>
+    </div>
+    <button class="btn btn-primary">Update Post</button>
+</form>

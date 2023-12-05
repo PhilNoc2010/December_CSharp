@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bg-black {
+  background-color: rgb(15, 15, 15);
+}
+
+.glow {
+
+  box-shadow: 1px 1px 30px 1px #1f1f1f;
+}
+
+.glow:hover {
+  animation: rgbshadows 2s infinite
+  /* box-shadow: 1px 1px 10px 2px rgb(208, 0, 255); */
+}
+
+.glow-nohover {
+  animation: rgbshadows 2s infinite
+}
+
+@keyframes rgbshadows {
+  0% { box-shadow: #5e60ce 1px 1px 10px 2px; }
+  50% { box-shadow: #4ea8de 1px 1px 10px 2px; }
+  75% { box-shadow: #64dfdf 1px 1px 10px 2px;}
+  100% { box-shadow: #6930c3 1px 1px 10px 2px; }
+ }

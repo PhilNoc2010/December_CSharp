@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "All Posts";
+}
+
+@model Post
+
+
+
+<div class="rounded shadow-primary p-3 mb-3 text-center border border-light glow">
+    <h3>Topic : @Model.Topic | Posted At: @Model.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</h3>
+    <p>Body : @Model.Body</p>
+    <img src="@Model.ImgURL" alt="@Model.Topic">
+</div>

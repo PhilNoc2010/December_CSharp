@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "All Posts";
+}
+
+@model List<Post>
+
+@foreach (Post p in Model)
+{
+    <div class="rounded shadow-primary p-3 mb-3 text-center border border-light glow">
+        <h3>Topic : @p.Topic | Posted At: @p.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</h3>
+        <p>Body : @p.Body</p>
+        <img src="@p.ImgURL" alt="@p.Topic">
+
+        <div class="d-flex justify-content-center gap-1">
+            <a class="btn btn-secondary" asp-action="ViewPost" asp-controller="Post" asp-route-postId="@p.PostId">View
+                Post</a>
+
+            <a class="btn btn-warning" asp-action="EditPost" asp-controller="Post" asp-route-postId="@p.PostId">Edit
+                Post</a>
+
+            <form asp-action="DeletePost" asp-route-postId="@p.PostId" method="post">
+                <button class="btn btn-danger">Delete Post</button>
+            </form>
+        </div>
+    </div>
+}
