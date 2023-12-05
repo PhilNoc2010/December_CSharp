@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SessionDemo
 build_property.RootNamespace = SessionDemo
-build_property.ProjectDir = C:\Users\seren\Documents\CodingDojo\Classes\2023_notes\SessionDemo\
+build_property.ProjectDir = c:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\5_Friday\SessionDemo\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\seren\Documents\CodingDojo\Classes\2023_notes\SessionDemo
+build_property.MSBuildProjectDirectory = c:\Users\seren\Documents\CodingDojo\Classes\2023\December_CSharp\Week1\5_Friday\SessionDemo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Home/Index.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Home/Player.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Home/Player.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGF5ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Home/Privacy.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Shared/Error.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/_ViewImports.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/_ViewStart.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/seren/Documents/CodingDojo/Classes/2023_notes/SessionDemo/Views/Shared/_Layout.cshtml]
+[c:/Users/seren/Documents/CodingDojo/Classes/2023/December_CSharp/Week1/5_Friday/SessionDemo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4wnfc2fct9
