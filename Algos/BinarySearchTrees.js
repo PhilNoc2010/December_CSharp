@@ -170,8 +170,33 @@ class BinarySearchTree {
      * @returns {BinarySearchTree} This tree.
      */
     insert(newVal) {
-        //your code here
-        // Like with Contains, we'll travel through our nodes and add a node once we find a null pointer that qualifies.
+        const node = new BSTNode(newVal);
+
+        if (this.isEmpty()) {
+            this.root = node;
+            return this;
+        }
+
+        let current = this.root;
+        // Note: while(true) is risky, but it's safe to use as long as we have return cases for all of our logic. That way the loop can interrupt without infinite looping. 
+        while (true) {
+            if (newVal <= current.data) {
+                if (current.left === null) {
+                    current.left = node;
+                    return this;
+                }
+
+                current = current.left;
+            } else {
+                // newVal is greater than current.data
+                if (current.right === null) {
+                    current.right = node;
+                    return this;
+                }
+
+                current = current.right;
+            }
+        }
     }
 
     /**
@@ -185,8 +210,91 @@ class BinarySearchTree {
      * @returns {BinarySearchTree} This tree.
      */
     insertRecursive(newVal, curr = this.root) {
-        //your code here
+        if (this.root === null) {
+            this.root = new BSTNode(newVal)
+            return this
+        }
+
+        if (curr.data === newVal) {
+            return this
+        }
+
+        if (newVal < curr.data) {
+            if (curr.left === null) {
+                curr.left = new BSTNode(newVal)
+                return this
+            }
+            return this.insertRecursive(newVal, curr.left)
+        }
+
+        else {
+            if (curr.right === null) {
+                curr.right = new BSTNode(newVal)
+                return this
+            }
+            return this.insertRecursive(newVal, curr.right)
+        }
+
     }
+
+
+    /**
+ * DFS Preorder: (CurrNode, Left, Right)
+ * Converts this BST into an array following Depth First Search preorder.
+ * Example on the fullTree var:
+ * [25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90]
+ * @param {Node} node The current node during the traversal of this tree.
+ * @param {Array<number>} vals The data that has been visited so far.
+ * @returns {Array<number>} The vals in DFS Preorder once all nodes visited.
+ */
+    toArrPreorder(node = this.root, vals = []) {
+        if (node === null) {
+            return []
+        }
+        vals.push(node.data)
+        this.toArrPreorder(node.left, vals)
+        this.toArrPreorder(node.right, vals)
+        return vals
+    }
+
+    /**
+     * DFS Inorder: (Left, CurrNode, Right)
+     * Converts this BST into an array following Depth First Search inorder.
+     * See debugger call stack to help understand the recursion.
+     * Example on the fullTree var:
+     * [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]
+     * @param {Node} node The current node during the traversal of this tree.
+     * @param {Array<number>} vals The data that has been visited so far.
+     * @returns {Array<number>} The vals in DFS Preorder once all nodes visited.
+     */
+    toArrInorder(node = this.root, vals = []) {
+        if (node) {
+            this.toArrInorder(node.left, vals)
+            vals.push(node.data)
+            this.toArrInorder(node.right, vals)
+        }
+        return vals
+    }
+
+    /**
+     * DFS Postorder (Left, Right, CurrNode)
+     * Converts this BST into an array following Depth First Search postorder.
+     * Example on the fullTree var:
+     * [4, 12, 10, 18, 24, 22, 15, 31, 44, 35, 66, 90, 70, 50, 25]
+     * @param {Node} node The current node during the traversal of this tree.
+     * @param {Array<number>} vals The data that has been visited so far.
+     * @returns {Array<number>} The vals in DFS Preorder once all nodes visited.
+     */
+    toArrPostorder(node = this.root, vals = []) {
+        // Your code here 
+        if (node) {
+            this.toArrPostorder(node.left, vals)
+            this.toArrPostorder(node.right, vals)
+            vals.push(node.data)
+        }
+        return vals
+    }
+
 
 }
 

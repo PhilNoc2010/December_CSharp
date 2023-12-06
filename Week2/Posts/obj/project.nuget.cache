@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sv7DdM2V5Y0zUjISbaOWH9iwA0gIxGiBgnbQBQVHgdJQr6mZyVaX6BWD2Z/Q5evvewWj+iXszjnRVunNKZlLhw==",
+  "dgSpecHash": "Aiv6TkpyqIpDgSqk/tC+dhHgVD2lS7a+ib1fks+X8PT2/hracp1U7Xq2Zq9oTzWn5S20o/UYDRRhxmZBIEp5QA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj",
+  "projectFilePath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\Posts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\seren\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\seren\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

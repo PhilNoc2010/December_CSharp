@@ -46,7 +46,7 @@ public class PostController : Controller
 
 
     // GET ALL POSTS (Read)
-
+    [SessionCheck]
     [HttpGet("posts")]
     public ViewResult AllPosts()
     {
@@ -57,7 +57,7 @@ public class PostController : Controller
     }
 
     // Get One Post
-
+    [SessionCheck]
     [HttpGet("posts/{postId}")]
     public IActionResult ViewPost(int postId)
     {
