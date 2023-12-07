@@ -1,0 +1,26 @@
+@model User
+
+<h1>@Model.FirstName's Posts:</h1>
+
+@foreach (Post p in @Model.AllPosts)
+{
+    <div class="rounded shadow-primary p-3 mb-3 text-center border border-light glow">
+        <h3>Topic : @p.Topic | Posted At: @p.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</h3>
+        <p>Posted By: @Model.FirstName @Model.LastName </p>
+        <p>Body : @p.Body</p>
+        <img src="@p.ImgURL" alt="@p.Topic">
+        <form asp-action="DeletePost" asp-controller="Post" asp-route-postId="@p.PostId" method="POST">
+            <button class="btn btn-danger">Delete Post</button>
+        </form>
+
+        <a class="btn btn-secondary" asp-action="EditPost" asp-controller="Post" asp-route-postId="@p.PostId">Edit
+            Post</a>
+
+
+    </div>
+}
+
+@if (@Model.AllPosts.Count == 0)
+{
+    <p>@Model.FirstName has no Posts!</p>
+}

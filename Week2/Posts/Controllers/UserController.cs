@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Posts.Models;
 
 namespace Posts.Controllers;
@@ -71,9 +72,34 @@ public class UserController : Controller
         }
 
         HttpContext.Session.SetInt32("UserId", dbUser.UserId);
-        return RedirectToAction("AllPosts");
+        return RedirectToAction("AllPosts", "Posts");
     }
 
+    [HttpPost("users/logout")]
+    public RedirectToActionResult LogOut()
+    {
+        HttpContext.Session.Clear();
+        HttpContext.Session.Remove("UserId");
+        return RedirectToAction("Index");
+    }
+
+
+    [HttpGet("users/profile")]
+    public IActionResult Profile()
+    {
+        int LoggedId = (int)HttpContext.Session.GetInt32("UserId");
+
+        User? LoggedUser = _context.Users.Include(u => u.AllPosts).FirstOrDefault(u => u.UserId == LoggedId);
+
+        if (LoggedUser == null)
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "User");
+        }
+
+        // Pass data into the view so we can access it!
+        return View(LoggedUser);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

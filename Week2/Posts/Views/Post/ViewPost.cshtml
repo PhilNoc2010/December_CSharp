@@ -8,6 +8,19 @@
 
 <div class="rounded shadow-primary p-3 mb-3 text-center border border-light glow">
     <h3>Topic : @Model.Topic | Posted At: @Model.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</h3>
+    <p>Posted By: @Model.Creator.FirstName @Model.Creator.LastName </p>
     <p>Body : @Model.Body</p>
     <img src="@Model.ImgURL" alt="@Model.Topic">
+
+    @if (Model.UserId == Context.Session.GetInt32("UserId"))
+    {
+
+        <form asp-action="DeletePost" asp-controller="Post" asp-route-postId="@Model.PostId" method="POST">
+            <button class="btn btn-danger">Delete Post</button>
+        </form>
+
+        <a class="btn btn-secondary" asp-action="EditPost" asp-controller="Post" asp-route-postId="@Model.PostId">Edit
+            Post</a>
+
+    }
 </div>

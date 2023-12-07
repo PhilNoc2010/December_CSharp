@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\Posts.csproj": {}
+    "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\Posts.csproj": {
+    "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\Posts.csproj",
+        "projectUniqueName": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj",
         "projectName": "Posts",
-        "projectPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\Posts.csproj",
+        "projectPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\Posts.csproj",
         "packagesPath": "C:\\Users\\seren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\week2\\Posts\\obj\\",
+        "outputPath": "C:\\Users\\seren\\Documents\\CodingDojo\\Classes\\2023\\December_CSharp\\Week2\\Posts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\seren\\AppData\\Roaming\\NuGet\\NuGet.Config",

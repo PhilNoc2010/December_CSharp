@@ -34,6 +34,13 @@ public class User
     [Compare("Password")]
     [DataType(DataType.Password)]
     public string PasswordConfirm { get; set; }
+
+
+    // Add Navigation Property to hold all the users posts!
+
+    public List<Post> AllPosts { get; set; } = new List<Post>();
+
+
 }
 
 

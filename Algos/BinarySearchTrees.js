@@ -296,28 +296,47 @@ class BinarySearchTree {
     }
 
     /**
- * Recursively counts the total number of nodes in this tree.
- * - Time: O(?).
- * - Space: O(?).
- * @param {Node} node The current node during the traversal of this tree.
- * @returns {number} The total number of nodes.
- */
-    size(node = this.root) {
-        //Your code here
-
-    }
-
-    /**
-     * Calculates the height of the tree which is based on how many nodes from
-     * top to bottom (whichever side is taller).
+     * Recursively counts the total number of nodes in this tree.
      * - Time: O(?).
      * - Space: O(?).
-     * @param {Node} node The current node during traversal of this tree.
-     * @returns {number} The height of the tree.
+     * @param {Node} node The current node during the traversal of this tree.
+     * @returns {number} The total number of nodes.
      */
-    height(node = this.root) {
+    size(node = this.root, count = 0) {
         //Your code here
-        // Note: We may want to use the Math library here to evaluate our recursive calls.
+        if (node) {
+            count = this.size(node.left, count)
+            count = this.size(node.right, count)
+            count++
+        }
+        // Expected: 15 for the full tree example.
+        return count
+    }
+
+
+    /**
+    * Calculates the height of the tree which is based on how many nodes from
+    * top to bottom (whichever side is taller).
+    * - Time: O(?).
+    * - Space: O(?).
+    * @param {Node} node The current node during traversal of this tree.
+    * @returns {number} The height of the tree.
+    */
+    height(node = this.root, height = 0) {
+        //Your code here
+        if (node) {
+            height++
+            let leftHeight = this.height(node.left, height)
+            let rightHeight = this.height(node.right, height)
+            if (leftHeight > rightHeight) {
+                return leftHeight
+            } else {
+                return rightHeight
+            }
+
+        }
+        return height
+
     }
 
 }
@@ -388,7 +407,6 @@ threeLevelTree.root.right.left = new BSTNode(13);
         10     22      35     70
       /   \   /  \    /  \   /  \
     4    12  18  24  31  44 66  90
-
 */
 
 // fullTree.print();
