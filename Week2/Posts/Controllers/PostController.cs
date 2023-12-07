@@ -4,6 +4,7 @@ using Posts.Models;
 
 namespace Posts.Controllers;
 
+[SessionCheck]
 public class PostController : Controller
 {
     private readonly ILogger<PostController> _logger;

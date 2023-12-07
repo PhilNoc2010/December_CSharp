@@ -295,6 +295,30 @@ class BinarySearchTree {
         return vals
     }
 
+    /**
+ * Recursively counts the total number of nodes in this tree.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Node} node The current node during the traversal of this tree.
+ * @returns {number} The total number of nodes.
+ */
+    size(node = this.root) {
+        //Your code here
+
+    }
+
+    /**
+     * Calculates the height of the tree which is based on how many nodes from
+     * top to bottom (whichever side is taller).
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {Node} node The current node during traversal of this tree.
+     * @returns {number} The height of the tree.
+     */
+    height(node = this.root) {
+        //Your code here
+        // Note: We may want to use the Math library here to evaluate our recursive calls.
+    }
 
 }
 

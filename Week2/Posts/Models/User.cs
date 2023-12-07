@@ -8,7 +8,7 @@ public class User
     [Key]
     public int UserId { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "First Name Required")]
     public string FirstName { get; set; }
 
     [Required]
