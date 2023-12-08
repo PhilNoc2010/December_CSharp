@@ -43,6 +43,8 @@ public class User
     // Posts liked by the user
     public List<UserPostLike> PostLikes { get; set; } = new();
 
+    public List<UserPostComment> PostComments { get; set; } = new();
+
 }
 
 

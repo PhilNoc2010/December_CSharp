@@ -42,3 +42,11 @@
         }
     </ul>
 </div>
+
+
+@* Passing down the postId for the form to use as a hidden input! *@
+
+@await Html.PartialAsync("_NewComment", new UserPostComment(){PostId = Model.PostId})
+
+
+@await Html.PartialAsync("_PostComments", Model.UserComments)

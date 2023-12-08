@@ -323,7 +323,6 @@ class BinarySearchTree {
     * @returns {number} The height of the tree.
     */
     height(node = this.root, height = 0) {
-        //Your code here
         if (node) {
             height++
             let leftHeight = this.height(node.left, height)

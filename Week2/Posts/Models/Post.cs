@@ -31,4 +31,5 @@ public class Post
 
     // Users that liked this post.
     public List<UserPostLike> UserLikes { get; set; }
+    public List<UserPostComment> UserComments { get; set; }
 }
