@@ -339,6 +339,35 @@ class BinarySearchTree {
 
     }
 
+    /**
+ * BFS order: horizontal rows top-down left-to-right.
+ * Converts this BST into an array following Breadth First Search order.
+ * Example on the fullTree var:
+ * [25, 15, 50, 10, 22, 35, 70, 4, 12, 18, 24, 31, 44, 66, 90]
+ * @param {Node} current The current node during the traversal of this tree.
+ * @returns {Array<number>} The data of all nodes in BFS order.
+ */
+    toArrLevelorder(current = this.root) {
+        let answer = []
+        let queue = []
+
+        if (current) {
+            queue.push(current)
+        }
+        while (queue.length > 0) {
+            let tempNode = queue.shift()
+            answer.push(tempNode.data)
+            if (tempNode.left) {
+                queue.push(tempNode.left)
+            }
+            if (tempNode.right) {
+                queue.push(tempNode.right)
+            }
+        }
+
+        return answer
+    }
+
 }
 
 const emptyTree = new BinarySearchTree();

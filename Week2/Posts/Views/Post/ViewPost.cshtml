@@ -1,5 +1,7 @@
 @{
     ViewData["Title"] = "All Posts";
+
+    bool liked = Model.UserLikes.Any(ul => ul.UserId == Context.Session.GetInt32("UserId"));
 }
 
 @model Post
@@ -23,4 +25,20 @@
             Post</a>
 
     }
+
+
+    <form asp-action="ToggleLike" asp-route-postId="@Model.PostId" asp-controller="Post">
+        <button class="btn btn-info">@(liked ? "Unlike" : "Like")</button>
+    </form>
+</div>
+
+<p class="text-center">Total Likes: @Model.UserLikes.Count</p>
+
+<div class="d-flex justify-content center align-items-top mt-3">
+    <ul>
+        @foreach (UserPostLike upl in Model.UserLikes)
+        {
+            <li>@upl.LikedBy?.FirstName</li>
+        }
+    </ul>
 </div>

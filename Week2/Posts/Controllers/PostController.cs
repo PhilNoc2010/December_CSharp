@@ -55,7 +55,11 @@ public class PostController : Controller
     public ViewResult AllPosts()
     {
 
-        List<Post> PostsFromDb = _context.Posts.Include(p => p.Creator).OrderByDescending(p => p.CreatedAt).ToList();
+        List<Post> PostsFromDb = _context.Posts.Include(p => p.Creator)
+                                                        .Include(p => p.UserLikes)
+                                                        .OrderByDescending(p => p.CreatedAt).ToList();
+
+        // List<Post> PostsFromDb = _context.Posts.Include(p => p.Creator).OrderByDescending(p => p.CreatedAt).ToList();
         // List<Post> PostsFromDb = _context.Posts.OrderByDescending(p => p.CreatedAt).ToList();
 
         return View("AllPosts", PostsFromDb);
@@ -66,7 +70,15 @@ public class PostController : Controller
     [HttpGet("posts/{postId}")]
     public IActionResult ViewPost(int postId)
     {
-        Post? OnePost = _context.Posts.Include(p => p.Creator).FirstOrDefault(p => p.PostId == postId);
+        // One to Many Query
+        // Post? OnePost = _context.Posts.Include(p => p.Creator).FirstOrDefault(p => p.PostId == postId);
+        //! Posts => UserPostLikes Table (UserLikes) => User Table (LikedBy) => User Table (Creator)
+
+        Post? OnePost = _context.Posts
+                                    .Include(p => p.UserLikes)
+                                    .ThenInclude(upl => upl.LikedBy)
+                                    .Include(p => p.Creator)
+                                    .FirstOrDefault(p => p.PostId == postId);
 
         if (OnePost == null)
         {
@@ -129,6 +141,36 @@ public class PostController : Controller
         }
 
         return View("EditPost", editedPost);
+    }
+
+
+    // Like Action
+
+    [HttpPost("posts/{postId}/likes")]
+    public IActionResult ToggleLike(int postId)
+    {
+        int userId = (int)HttpContext.Session.GetInt32("UserId");
+
+        UserPostLike? existingLike = _context.UserPostLikes.FirstOrDefault(upl => upl.PostId == postId && upl.UserId == userId);
+
+        if (existingLike == null)
+        {
+            UserPostLike newLike = new() { UserId = userId, PostId = postId };
+            _context.Add(newLike);
+        }
+        else
+        {
+            _context.Remove(existingLike);
+        }
+
+        _context.SaveChanges();
+
+        // return RedirectToAction("AllPosts");
+
+        Console.WriteLine("\n\n\n" + HttpContext.Request.Headers.Referer + "\n\n\n");
+
+        return Redirect(HttpContext.Request.Headers.Referer);
+
     }
 
 

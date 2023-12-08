@@ -6,15 +6,23 @@
 
 @foreach (Post p in Model)
 {
+    bool liked = p.UserLikes.Any(ul => ul.UserId == Context.Session.GetInt32("UserId"));
+
     <div class="rounded shadow-primary p-3 mb-3 text-center border border-light glow">
         <h3>Topic : @p.Topic | Posted At: @p.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</h3>
         <p>Posted By: @p.Creator.FirstName @p.Creator.LastName </p>
+        <p>Total Likes: @p.UserLikes.Count</p>
         <p>Body : @p.Body</p>
         <img src="@p.ImgURL" alt="@p.Topic">
 
         <div class="d-flex justify-content-center gap-1 mt-3">
             <a class="btn btn-secondary" asp-action="ViewPost" asp-controller="Post" asp-route-postId="@p.PostId">View
                 Post</a>
+
+            <form asp-action="ToggleLike" asp-route-postId="@p.PostId" asp-controller="Post">
+                <button class="btn btn-info">@(liked ? "Unlike" : "Like")</button>
+            </form>
+
         </div>
     </div>
 }

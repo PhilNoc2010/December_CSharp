@@ -89,7 +89,10 @@ public class UserController : Controller
     {
         int LoggedId = (int)HttpContext.Session.GetInt32("UserId");
 
+        // Fetching the User and what posts they liked.
+
         User? LoggedUser = _context.Users.Include(u => u.AllPosts).FirstOrDefault(u => u.UserId == LoggedId);
+
 
         if (LoggedUser == null)
         {

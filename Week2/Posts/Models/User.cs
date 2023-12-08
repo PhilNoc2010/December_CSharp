@@ -40,8 +40,21 @@ public class User
 
     public List<Post> AllPosts { get; set; } = new List<Post>();
 
+    // Posts liked by the user
+    public List<UserPostLike> PostLikes { get; set; } = new();
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 public class UniqueEmailAttribute : ValidationAttribute

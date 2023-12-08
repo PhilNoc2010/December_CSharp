@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Posts.Models;
 
@@ -10,9 +11,10 @@ using Posts.Models;
 namespace Posts.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20231207204719_ThirdMigration")]
+    partial class ThirdMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,33 +88,6 @@ namespace Posts.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Posts.Models.UserPostLike", b =>
-                {
-                    b.Property<int>("UserPostLikeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("PostId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserPostLikeId");
-
-                    b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserPostLikes");
-                });
-
             modelBuilder.Entity("Posts.Models.Post", b =>
                 {
                     b.HasOne("Posts.Models.User", "Creator")
@@ -124,35 +99,9 @@ namespace Posts.Migrations
                     b.Navigation("Creator");
                 });
 
-            modelBuilder.Entity("Posts.Models.UserPostLike", b =>
-                {
-                    b.HasOne("Posts.Models.Post", "LikedPost")
-                        .WithMany("UserLikes")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Posts.Models.User", "LikedBy")
-                        .WithMany("PostLikes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("LikedBy");
-
-                    b.Navigation("LikedPost");
-                });
-
-            modelBuilder.Entity("Posts.Models.Post", b =>
-                {
-                    b.Navigation("UserLikes");
-                });
-
             modelBuilder.Entity("Posts.Models.User", b =>
                 {
                     b.Navigation("AllPosts");
-
-                    b.Navigation("PostLikes");
                 });
 #pragma warning restore 612, 618
         }

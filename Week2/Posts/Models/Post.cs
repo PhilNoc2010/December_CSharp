@@ -28,4 +28,7 @@ public class Post
     public int UserId { get; set; }
 
     public User? Creator { get; set; }
+
+    // Users that liked this post.
+    public List<UserPostLike> UserLikes { get; set; }
 }
