@@ -82,6 +82,24 @@ class MinHeap {
         // Hint 2: Since we'll be swapping, we might want to use a temp variable to hold onto any node data as we swap.
     }
 
+    /**
+   * Extracts the min num from the heap and then re-orders the heap to
+   * maintain order so the next min is ready to be extracted.
+   * 1. Save the first node to a temp var.
+   * 2. Pop last node off and set idx1 equal to the popped value.
+   * 3. Iteratively swap the old last node that is now at idx1 with it's
+   *    smallest child IF the smallest child is smaller than it.
+   * - Time: O(log n) logarithmic due to shiftDown.
+   * - Space: O(1) constant.
+   * @returns {?number} The min number or null if empty.
+   */
+    extract() {
+        // Your Code Here
+        // Remember to make use of our helper functions like idxOfLeftChild / idxOfRightChild
+        // Edge cases to check for: heap is empty or heap only has 1 value.
+
+    }
+
     // prints tree with root on left and index in parens in reverse inorder traversal
     // https://www.geeksforgeeks.org/print-binary-tree-2-dimensions/
     printHorizontalTree(parentIdx = 1, spaceCnt = 0, spaceIncr = 10) {
