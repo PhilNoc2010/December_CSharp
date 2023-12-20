@@ -179,6 +179,30 @@ class LinkedListQueue {
         //Your Code Here
         // Note: Our Dequeue method we created returns the data of the node. This can be useful for comparing values.
         // We also want to make sure the queues are returned to the original order after evaluating. (If we were dequeueing, we'd want to enqueue)
+        if (this.len() !== q2.len()) {
+            return false
+        }
+
+        let answer = true
+        const origTail = this.tail
+        while (this.head !== origTail) {
+            const node1 = this.dequeue()
+            const node2 = q2.dequeue()
+            if (answer && node1 !== node2) {
+                answer = false
+            }
+            this.enqueue(node1)
+            q2.enqueue(node2)
+        }
+        const node1 = this.dequeue()
+        const node2 = q2.dequeue()
+        if (answer && node1 !== node2) {
+            answer = false
+        }
+        this.enqueue(node1)
+        q2.enqueue(node2)
+
+        return answer
     }
 
     /**
