@@ -206,6 +206,45 @@ class LinkedListQueue {
     }
 
     /**
+     * Determines whether the sum of the left half of the queue items is equal to
+     * the sum of the right half. Avoid indexing the queue items directly via
+     * bracket notation, use the queue methods instead for practice.
+     * Use no extra array or objects.
+     * If queue cannot be evenly divided, return false.
+     * The queue should be returned to it's original order when done.
+     * - Time: O(n^2) quadratic, n = queue length. Quadratic due to dequeue on an
+     *     array queue being O(n).
+     * - Space: O(1) constant.
+     * @returns {boolean} Whether the sum of the left and right halves is equal.
+     */
+    isSumOfHalvesEqual() {
+        // if the size of the queue is odd, there cannot be two equal halves, so false will be returned.
+        if (this.size % 2 !== 0) {
+            return false
+        }
+        //now that we know we have an even number, we will dequeue our queue nodes
+        // to determine the sum of the left and right side nodes
+        let leftSideSum = 0
+        let rightSideSum = 0
+        let count = 0
+        let length = this.len()
+        let halfPoint = length / 2
+
+        while (count < length) {
+            const dqNode = this.dequeue()
+            if (count < halfPoint) {
+                leftSideSum += dqNode
+            } else {
+                rightSideSum += dqNode
+            }
+            this.enqueue(dqNode)
+            count++
+        }
+
+        return leftSideSum == rightSideSum
+    }
+
+    /**
      * Enqueues each of the given items.
      * - Time: O(n) linear since enqueue is O(1), n = vals.length.
      * - Space: O(1) constant.
